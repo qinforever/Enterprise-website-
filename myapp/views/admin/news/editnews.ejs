@@ -1,0 +1,77 @@
+<%include ../base/header.ejs%>
+
+<%include ../base/headertop.ejs%>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <%include ../base/leftnav.ejs%>
+
+        <div class="col-sm-10">
+
+            <div class="panel panel-default">
+
+                <div class="panel-heading">
+                    增加新闻
+                </div>
+                <div class="panel-body">
+                    <div class="table-responsive input-form">
+                        <div>
+                            <ul>
+                                <li> 新闻标题: <input  type="text" class="title" value="<%=data.title%>"/></li>
+                                <li> 新闻作者: <input  type="text" class="author" value="<%=data.author%>"/></li>
+                                <li>  封面图片: 
+                                    <form class="headerPhoto" enctype="multipart/from-data" style="display:inline">
+                                        <input class="newpic" type="file" name="face" multiple="multiple">
+                                    </form>
+                                </li>
+                                <li>  新闻分类:
+                                    <select class="cid" id="cid">
+                                        <%for(var i=0;i<catedata.length;i++){%>
+                                         <option value="<%=catedata[i]['_id']%>" <%if(data.cid==catedata[i]['_id']){%>selected<%}%> >
+                                          <%=catedata[i].title%>
+                                        </option>
+                                        <%}%>
+                                    </select>                                
+                                </li>
+                                <li>
+                                    商品简介:
+                                    <textarea class="description" style="vertical-align: top;width:600px;height:150px"><%=data.description%></textarea>
+                                </li>
+                                <li>
+                                    新闻详情:
+                                    <textarea class="content" id="content" width="600" height="300"><%=data.content%></textarea>
+                                </li>
+                                <li> 状态:
+                                    显示：<input type="radio" value="1" name="status" <%if(data.status==1){%>checked<%}%>/>                                  　
+                                    隐藏：<input type="radio" value="0" name="status"<%if(data.status==0){%>checked<%}%>/>
+                                </li>
+                                <li>
+                                    <br/>
+                                    <button editid="<%=data._id%>" class="btn btn-success editnews">提交</button>
+                                </li>
+                            </ul>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/public/js/editnews.js"></script>
+<script src="/public/xheditor/xheditor-1.2.2.min.js" charset="utf-8"></script>
+<script src="/public/xheditor/xheditor_lang/zh-cn.js" charset="utf-8"></script>
+<script>
+    $('#content').xheditor({
+        html5Upload: false,   /*必须这样设置 */
+        upMultiple: '3',  /*最多上传的数量*/
+        tools:'full',   /*工具*/
+        skin:'default',  /*批复*/
+        width:600, height:300,
+        upImgUrl:"/api/admin/uploadnews",   /*上传图片提交的地址*/
+        upImgExt:"jpg,jpeg,gif,png"   /*允许上传的格式*/
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<%include ../base/header.ejs%>
+
+<%include ../base/headertop.ejs%>
+
+<div class="container-fluid">
+<div class="row">
+    <%include ../base/leftnav.ejs%>
+    <div class="col-sm-10">
+        <ol class="breadcrumb">
+            <li class="active">案例管理
+            </li>
+            <li class="active">增加案例
+            </li>
+        </ol>
+        <div class="panel panel-default">
+            <div class="panel-heading">增加案例分类</div>
+            <div class="panel-body">
+                <div class="table-responsive input-form">
+                    <ul>
+                        <li> 案例分类名称:
+                            <input type="text" class="addcatetitle" />
+                        </li>
+                        <li> 是否推荐: 
+                                推荐 <input type="radio" value="1" name="recommend" checked/> 　 
+                                不推荐 <input type="radio" value="0" name="recommend" />
+                            </li>
+                        <li> 状态: 
+                            使用 <input type="radio" value="1" name="status" checked/> 　 
+                            未使用 <input type="radio" value="0" name="status" />
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-success addcatecase">提交</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<script src="/public/js/case.js"></script>
+</body>
+</html>

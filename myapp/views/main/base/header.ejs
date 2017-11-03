@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>麦田国际-成功案例</title>
+<link rel="stylesheet" type="text/css" href="/public/css/base.css"/>
+<link rel="stylesheet" href="/public/bootstrap/css/bootstrap.css">
+<script src="/public/js/jquery.min.js"></script>
+</head>
+
+<body>
+<div id="header">
+	<div class="logo"><a href="/" title="欢迎来到麦田国际"><h1>麦田国际</h1></a></div>
+	<div class="head-x"></div>
+    <div class="h-word">奉行卓越品质则可拥抱世界</div>
+    <div class="h-nav">
+    	<ul>
+            <%for(let i=0;i<nav.length;i++){%>
+                <li class="<%if(nav[i].link==url){%>active<%}%>"><a href="<%=nav[i].link%>"><%=nav[i].navtitle%></a></li>
+            <%}%>
+        </ul>
+    </div>
+</div>
+<!-- <script type="text/javascript">
+$('.h-nav>ul>li').eq(0).addClass('active');
+$('.h-nav>ul>li').click(function(){
+    location.href; 
+    $(this).addClass('active').siblings().removeClass('active');
+})
+</script> -->

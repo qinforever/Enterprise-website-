@@ -1,0 +1,140 @@
+@charset "utf-8";
+/* CSS Document */
+*{ margin:0; padding:0;}
+html,body,p,h1,h2,h3,h4,li{ margin:0; padding:0;}
+li{ list-style:none;}
+h1,h2,h3,h4,h5,h6,strong,b{ font-weight:100;}
+a{ text-decoration:none !important;cursor: pointer;}
+i,em{ font-style:normal;}
+input{ outline:none;}
+
+#header{ width:1140px; height:103px; margin:0 auto;}
+#header .logo{ width:247px; height:56px; background:url(/public/images/sy_03.jpg) no-repeat; margin:24px 38px 23px 0; float:left;}
+#header .logo a{ display:block;width:247px; height:56px;}
+#header .logo a h1{ text-indent:-9999px;}
+#header .head-x{ width:4px; height:50px; background:url(/public/images/sy_06.jpg) no-repeat; margin-top:28px; float:left; margin-right:20px;}
+#header .h-word{ width:87px; float:left; font-size:13px; font-style:italic; color:#999997; line-height:26px; margin-top:28px; margin-right:127px;}
+#header .h-nav{ float:left; width:616px; height:72px; margin-top:31px;}
+#header .h-nav ul li{ float:left;}
+#header .h-nav ul li a{ display:block; padding-left:20px; padding-right:20px;color:#000; text-align:center; line-height:72px; font-size:12px;}
+#header .h-nav ul li a:hover{ background:#f75a53; border-radius:4px 4px 0 0; color:#fff;}
+#header .h-nav ul li.active a{background:#f75a53; color:#fff; border-radius:4px 4px 0 0;}
+
+#bottom-wapper{ height:138px; background:#363636; width:100%;}
+.bottom{ width:1140px; height:138px; margin:0 auto; text-align:center;color:#7a7a7a; font-size:12px;}
+.bottom ul{ display:inline-block; margin-top:30px; margin-bottom:5px;}
+.bottom ul li{ float:left;}
+.bottom ul li a{ display:block; color:#7a7a7a; border-right:1px solid #7a7a7a; padding:0 10px;}
+.bottom p{line-height:30px;}
+
+.case{overflow: hidden;margin: 20px auto;}
+.case li{margin-bottom: 20px;}
+
+.carousel-right{height:495px;position: relative;}
+.carousel-right .carouseSlider{width:100%;height:495px;}
+.carousel-right .carouseSlider li{position: absolute;left: 0px;top: 0px;}
+.carousel-right .carouseSlider li img{ width:100%;}
+.carousel-right .subScript{width:200px; height:20px; position: absolute; left:50%; bottom:20px;}
+.carousel-right .subScript li{display: inline-block; width:20px; height:20px;cursor:pointer;background: #f5f5f5;border-radius: 100%; color: #B0B0B0;text-align: center; line-height:20px;font-family: "å¾®è½¯é›…é»‘"; margin-left:5px;}
+.carousel-right .subScript li.active{ color: red; background: #fff;}
+.carousel-right a{display: none;position: absolute;top: 50%;width: 50px;height: 50px;background: url() #fff no-repeat;z-index: 999;}
+.carousel-right a.next{right: 0px;background-position: -25px -18px;}
+.carousel-right a.prev{left: 0px;background-position: 5px -18px;}
+.carousel-right:hover a{display: block;}
+
+#partners{ background:#f7f7f7; height:386px; width:100%; text-align:center;overflow: hidden;}
+#partners h2{ font-size:24px; padding-top:30px;margin-top:0px;}
+#partners p{ font-size:14px; color:#97989c; line-height:30px; margin-top:8px; margin-bottom:22px;}
+#partners .part-logo{width:1140px;height:203px; background:#fff;border:1px solid #ededed;margin:0 auto;}
+#partners .part-logo ul li{ height:101px; border-bottom:1px solid #ededed;border-right:1px solid #ededed;}
+#partners .part-logo ul li:nth-child(6n){border-right:none;}
+#partners .part-logo ul li img{display: block;width: 150px;height: 45px;margin:0 auto;margin-top: 27.5px;}
+
+#main-wapper{ background:#1a1b1f; height:543px; width:100%;overflow:hidden;}
+.main{ width:1140px; height:543px; margin:0 auto; text-align:center;}
+.main h2{ font-size:24px; color:#fff; padding-top:50px;}
+.main p{ font-size:14px; color:#fff; margin-top:15px;}
+.main .main-bot ul li{ background: #cfcfcf; width:341px; height:327px; float:left; margin-right:58px; }
+.main .main-bot ul li h4{ color:#f55c54; font-size:16px; font-weight:900; margin-top:25px;}
+.main .main-bot ul li p{ color:#000; font-size:14px; margin:25px 44px; line-height:30px;}
+.main .main-bot{ margin-top:40px;}
+.main .main-bot .mb01{ background:url(/public/images/img01.png) no-repeat; background-position:0 0; width:130px; height:131px; margin-left:106px;}
+.main .main-bot .mb02{ background:url(/public/images/img01.png) no-repeat; background-position:0 -162px; width:130px; height:131px; margin-left:106px;}
+.main .main-bot .mb03{ background:url(/public/images/img01.png) no-repeat; background-position:0 -324px; width:130px; height:131px; margin-left:106px;}
+
+#news{ width:1140px; height:809px; margin:0 auto; text-align:center;}
+#news h2{ font-size:24px; padding-top:30px;}
+#news p{ font-size:14px; color:#97989c; line-height:30px; margin-top:8px; margin-bottom:22px;}
+#news .news-nav{height:40px; margin:0 auto; width:800px;}
+#news .news-nav li{ float:left; }
+#news .news-nav li a{ display:block; color:#fff; font-size:14px; padding:0 72px; background:#666; height:40px; line-height:40px;}
+#news .news-nav li.active a{ background:#f75a53;position: relative;}
+#news .news-nav li.active a::after{content:'';display:block;width:15px;height:15px;background:#f75a53;position:absolute;bottom: -8px;left:50%;transform: rotate(45deg)}
+#news .news-tu{ margin-top:15px;}
+#news .news-tu li img{display: block;width: 100%;height:250px;margin-top: 15px;}
+
+#f-bot-wapper{ background:#f2f2f2; height:350px; width:100%;}
+.f-bot{ width:1140px; height:350px; margin:0 auto;}
+.f-bot h4{ font-size:18px; color:#000; padding-top:32px; margin-bottom:25px;}
+.f-bot .fb01{ width:341px; float:left; margin-right:50px;}
+.f-bot .fb01 li{color:#888; font-size:13px; line-height:30px;}
+.f-bot .fb01 li a{color:#888;}
+.f-bot .fb01 li span{ float:right;}
+.f-bot .fb01 .more{ margin-top:20px;}
+.f-bot .fb01 .more a{ display:block; width:118px; height:32px; line-height:32px; font-size:12px; background:#f75a53; color:#fff; text-align:center; border-radius:3px;}
+.f-bot .fb02{ width:341px; float:left; margin-right:50px;}
+.f-bot .fb02 li{color:#888; font-size:13px; line-height:30px;}
+.f-bot .fb02 li a{color:#888;}
+.f-bot .fb02 li span{ float:right;}
+.f-bot .fb02 .more{ margin-top:20px;}
+.f-bot .fb02 .more a{ display:block; width:118px; height:32px; line-height:32px; font-size:12px; background:#f75a53; color:#fff; text-align:center; border-radius:3px;}
+.f-bot .fb03{ width:341px; float:left;}
+.f-bot .fb03 li{color:#888; font-size:13px; line-height:30px;}
+.f-bot .fb03 li a{color:#888;}
+.f-bot .fb03 li span{ float:right;}
+.f-bot .fb03 .more{ margin-top:20px;}
+.f-bot .fb03 .more a{ display:block; width:118px; height:32px; line-height:32px; font-size:12px; background:#f75a53; color:#fff; text-align:center; border-radius:3px;}
+
+#news.about{ width:1140px; height:320px; margin:0 auto;}
+.news-left{ float:left; width:354px; margin-right:50px; height:320px;}
+.news-right{ border-bottom:#eeeeee 1px solid; float:right; width:736px; padding-bottom:36px; margin-top:90px;height:220px;}
+.news-right h4{ font-size:16px; color:#333333; margin-bottom:30px;}
+.news-right p{ font-size:14px; color:#656762; line-height:30px;}
+
+#mission{ width:1140px; margin:0 auto; text-align:center;  border-bottom:1px #eee solid;}
+#mission h2{ padding-top:25px; font-size:16px; margin-bottom:35px;}
+#mission ul{overflow: hidden;}
+#mission ul li{ float:left;width:33.3%;height:300px;overflow: hidden;}
+#mission ul li p{ font-size:14px; color:#666762;line-height: 40px;margin: 0;}
+#mission ul li img{width:90%;height:90%;display: block;margin: 0 auto;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#banner-wapper{ background:url(../images/gywm_03.jpg) repeat-x; height:201px; width:100%;}
+.banner{ width:1140px; height:201px; margin:0 auto;}
+.banner h2{ color:#fefeff; font-size:24px; display:inline-block; border-right:#feb3b0 1px solid; padding-right:16px; margin-right:15px; margin-top:68px; margin-bottom:22px;}
+.banner span{ color:#feb3b0; font-size:17px;}
+.banner p span{ font-size:13px;}
+.banner p{ color:#fefeff; font-size:12px;}
+.banner p a{ color:#fefeff;}
+
+#ban-bot-wapper{ background:#f7f7f7; width:100%; height:60px;}
+.ban-bot{ width:1140px; height:60px; margin:0 auto;}
+.ban-bot ul{ float:right;}
+.ban-bot ul li{ float:left;}
+.ban-bot ul li a{ display:block; color:#666; font-size:12px; height:60px; line-height:60px; padding:0 14px;}
+.ban-bot ul li a:hover{ background:#f75a53; color:#fff;}

@@ -1,0 +1,47 @@
+<%include ../base/header.ejs%>
+
+<%include ../base/headertop.ejs%>
+
+<div class="container-fluid">
+<div class="row">
+    <%include ../base/leftnav.ejs%>
+    <div class="col-sm-10">
+        <ol class="breadcrumb">
+            <li class="active">轮播图管理
+            </li>
+            <li class="active">轮播图添加
+            </li>
+        </ol>
+        <div class="panel panel-default">
+            <div class="panel-heading">合作伙伴添加</div>
+            <div class="panel-body">
+                <div class="table-responsive input-form">
+                    <ul>
+                      <input type="hidden" value="partner" class="facous" />
+                        <li> 合作伙伴名称:
+                            <input type="text" class="parthertit" />
+                        </li>
+                        <li>
+                          <form class="headerPhoto" enctype="multipart/from-data" method="post">
+                            <input class="facouspic" type="file" name="facouspic" multiple="multiple">
+                          </form>
+                          <img class="caseimg" src="" alt="">
+                        </li>
+                        <li> 状态: 
+                            显示 <input type="radio" value="1" name="status" checked/> 　 
+                            隐藏 <input type="radio" value="0" name="status" />
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-success addparther">提交</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<script src="/public/js/facous.js"></script>
+</body>
+</html>

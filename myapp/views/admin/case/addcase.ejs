@@ -1,0 +1,56 @@
+<%include ../base/header.ejs%>
+
+<%include ../base/headertop.ejs%>
+
+<div class="container-fluid">
+<div class="row">
+    <%include ../base/leftnav.ejs%>
+    <div class="col-sm-10">
+        <ol class="breadcrumb">
+            <li class="active">案例管理
+            </li>
+            <li class="active">添加案例
+            </li>
+        </ol>
+        <div class="panel panel-default">
+            <div class="panel-heading">添加案例</div>
+            <div class="panel-body">
+                <div class="table-responsive input-form">
+                    <ul>
+                        <li> 案例标题:
+                            <input type="text" class="title" />
+                        </li>
+                        <li> 所属分类:
+                          <select class="cid" id="cid">
+                            <%for(var i=0;i<data.length;i++){%>
+                             <option value="<%=data[i]['_id']%>"><%=data[i].catecasetitle%></option>
+                            <%}%>
+                        </select>   
+                        </li>
+                        <li> 案例简介:
+                            <input type="text" class="description" />
+                        </li>
+                        <li> 案例封面:
+                            <form class="headerPhoto" action="/updataPhoto" enctype="multipart/from-data" method="post">
+                                <input class="casepic" type="file" name="casepic" multiple="multiple">
+                            </form>
+                            <img class="caseimg" src="" alt="">
+                        </li>
+                        <li> 用户状态: 显示：
+                            <input type="radio" value="1" name="status" checked/> 　 
+                            隐藏：<input type="radio" value="0" name="status" />
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-success addcase">提交</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<script src="/public/js/case.js"></script>
+</body>
+</html>

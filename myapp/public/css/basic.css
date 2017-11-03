@@ -1,0 +1,37 @@
+ul,li{
+    list-style-type: none;
+}
+.input-form li{
+    margin: 5px 0px;
+}
+
+.navbar-header{
+    width: 180px;
+    text-align: center;
+}
+.navbar-inverse .navbar-nav>li>a{
+    color:#f9f9f9;
+}
+.navbar-inverse{
+    background:#46473F;
+}
+input[type=file]{
+ display: inline !important;
+
+}
+.photoimg,.caseimg{
+    display: block;
+    width:50px;
+    height:50px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
+.table tr td{
+    vertical-align: middle !important;
+}
+.pagination{
+    float: right;
+}
+table tr td:last-child{
+    max-width: 50px;
+}

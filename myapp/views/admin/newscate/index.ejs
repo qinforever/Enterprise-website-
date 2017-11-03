@@ -1,0 +1,60 @@
+<%include ../base/header.ejs%>
+
+<%include ../base/headertop.ejs%>
+
+<div class="container-fluid">
+    <div class="row">
+        <%include ../base/leftnav.ejs%>
+        <div class="col-sm-10">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    搜索
+                </div>
+                <div class="panel-body">
+                    <form role="form" class="form-inline">
+                        <div class="form-group">
+                            <label for="name">名称</label>
+                            <input type="text" class="form-control" id="name" placeholder="请输入名称">
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-default">开始搜索</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--
+                列表展示
+            -->
+            <div class="table-responsive">
+                <table class="table table-stripede">
+                    <thead>
+                    <tr>
+                        <th>编号</th>
+                        <th>名称</th>
+                        <th>状态</th>
+                       <th class="text-center">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <%for(var i=0;i<data.length;i++){%>
+                        <tr>
+                            <td><%=i+1%></td>
+                            <td><%=data[i].title%></td>
+                            <td><%=data[i].status%></td>
+                            <td class="text-center">
+                                <a href="/admin/nwes/edit?id=<%=data[i]._id%>" class="btn btn-success">修改</a>                           
+                                <a class="btn btn-danger">删除</a>
+                            </td>
+                        </tr>
+                    <%}%>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

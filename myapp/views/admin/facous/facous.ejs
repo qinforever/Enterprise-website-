@@ -1,0 +1,61 @@
+<%include ../base/header.ejs%>
+
+<%include ../base/headertop.ejs%>
+<div class="container-fluid">
+    <div class="row">
+        <%include ../base/leftnav.ejs%>
+        <div class="col-sm-10">
+            <ol class="breadcrumb">
+                <li class="active">轮播图管理
+                </li>
+                <li class="active">轮播图列表
+                </li>
+            </ol>
+            <div class="panel panel-default">
+                <div class="panel-heading">搜索 </div>
+                <div class="panel-body">
+                    <div role="form" class="form-inline">
+                        <div class="form-group">
+                            <label for="name">名称</label>
+                            <input type="text" class="form-control userkey" id="name" placeholder="请输入名称">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-default usersearch">开始搜索</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--列表展示-->
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr><th>编号</th><th>头像</th><th>名称</th><th>所属分类</th><th>状态</th><th class="text-center">操作</th></tr>
+                    </thead>
+                    <tbody>
+                        <%for(let i=0;i<data.length;i++){%>
+                            <tr>
+                            <td><%=i+1%></td>
+                            <td><img width="50" height="50" src="<%=data[i].facousimg%>" alt=""></td>
+                            <td style="overflow:hidden;text-overflow:ellipsis;white-space: nowrap;"><%=data[i].title%></td>
+                            <td><%if(data[i].facous=="facous"){%>轮播图<%}else{%>战略合作图<%}%></td>
+                            <td>
+                                <%if(data[i].status==0){%>隐藏<%}else{%>显示<%}%>
+                            </td>
+                            <td class="text-center">
+                                <button class="btn btn-info">修改</button>
+                                <button class="btn btn-danger facousdel" deleteid="<%=data[i]._id%>">删除</button>
+                            </td>
+                            </tr>
+                        <%}%>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="page" class="pagination"></div>
+    </div>
+</div>
+
+<script src="/public/js/facous.js"></script>
+<%include ../base/page.ejs%>
+</body>
+</html>
