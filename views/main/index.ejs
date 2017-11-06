@@ -1,0 +1,100 @@
+<%include ./base/header.ejs%>
+
+<div class="carousel-right container-fulid">
+    <ul class="carouseSlider"></ul>
+    <ul class="subScript"></ul>
+    <a class="next" href="javascript:;"></a>
+    <a class="prev" href="javascript:;"></a>
+</div>
+<div id="partners">
+    <h2>战略合作 Strategic partners</h2>
+    <p>真诚、共赢、无微不至</p>
+    <div class="part-logo">
+        <ul>
+            <%for(let i=0;i<partner.length;i++){%>
+                <li class="col-md-2"><a href="javascript:;"><img src="<%=partner[i].facousimg%>" ></a></li>
+            <%}%>      
+        </ul>
+    </div>
+</div>
+
+<div id="main-wapper">
+    <div class="main">
+        <h2>我们的优势 Our Advantages</h2>
+        <p>创独一无二的设计，造国际品质的产品，行无微不至的服务</p>
+        <div class="main-bot">
+            <ul>
+                <li>
+                    <div class="mb01"></div>
+                    <h4>我们的设计 Our Design</h4>
+                    <p>从实地到方案敲定再到设计出图，每一步都有优秀的设计团队全程跟踪，为你打造出最适合的作品是最诚恳的义务。</p>
+                </li>
+                <li>
+                    <div class="mb02"></div>
+                    <h4>我们的设计 Our Design</h4>
+                    <p>从实地到方案敲定再到设计出图，每一步都有优秀的设计团队全程跟踪，为你打造出最适合的作品是最诚恳的义务。</p>
+                </li>
+                <li style="margin-right:0;">
+                    <div class="mb03"></div>
+                    <h4>我们的设计 Our Design</h4>
+                    <p>从实地到方案敲定再到设计出图，每一步都有优秀的设计团队全程跟踪，为你打造出最适合的作品是最诚恳的义务。</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="news">
+    <h2>成功案例 Successful Case</h2>
+    <p>创独一无二的设计，造国际品质的产品，行无微不至的服务</p>
+    <ul class="news-nav">
+        <%for(let i=0;i<casecate.length;i++){%>
+                <li id="<%=casecate[i]._id%>"><a href="#"><%=casecate[i].catecasetitle%></a></li>
+        <%}%>
+    </ul>
+    <ul class="news-tu row">
+        <%for(let i=0;i<caserecommend.length;i++){%>
+            <li class="col-md-4"><a href="#"><img src="<%=caserecommend[i].caseimage%>" alt="<%=caserecommend[i].title%>"/></a></li>
+        <%}%>
+    </ul>
+</div>
+
+<div id="f-bot-wapper">
+    <div class="f-bot">
+        <div class="newtitle" style="width:100%;display:flex;">
+            <%for(let i=0;i<newscate.length;i++){%>
+                <h4 style="flex:1;text-align:left;"><%=newscate[i].title%> Company News</h4>
+            <%}%>
+        </div>
+        <div class="fb01">
+            <ul>
+                <%for(let i=0;i<newsone.length;i++){%>
+                    <li><a href="#"><%=newsone[i].title%></a><span>07-31</span></li>
+                <%}%>
+            </ul>
+            <div class="more"><a href="#">MORE INFO →</a></div>
+        </div>
+        <div class="fb02">
+            <ul>
+                <%for(let i=0;i<newstwo.length;i++){%>
+                    <li><a href="#"><%=newstwo[i].title%></a><span>07-31</span></li>
+                <%}%>
+            </ul>
+            <div class="more"><a href="#">MORE INFO →</a></div>
+        </div>
+        <div class="fb03">
+            <ul>
+                <%for(let i=0;i<newsthree.length;i++){%>
+                    <li><a href="#"><%=newsthree[i].title%></a><span>07-31</span></li>
+                <%}%>
+            </ul>
+            <div class="more"><a href="#">MORE INFO →</a></div>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<script src="/public/js/slide.js"></script>
+<%include ./base/footer.ejs%>

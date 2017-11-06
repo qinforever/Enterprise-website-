@@ -1,0 +1,43 @@
+<%include ../base/header.ejs%>
+
+<%include ../base/headertop.ejs%>
+
+<div class="container-fluid">
+<div class="row">
+    <%include ../base/leftnav.ejs%>
+    <div class="col-sm-10">
+        <ol class="breadcrumb">
+            <li class="active">导航管理
+            </li>
+            <li class="active">导航添加
+            </li>
+        </ol>
+        <div class="panel panel-default">
+            <div class="panel-heading">导航添加</div>
+            <div class="panel-body">
+                <div class="table-responsive input-form">
+                    <ul>
+                        <li> 导航名称:
+                            <input type="text" class="addnavtitle" />
+                        </li>
+                        <li> 导航地址:
+                                <input type="text" class="link" />
+                            </li>
+                        <li> 状态: 
+                            使用 <input type="radio" value="1" name="status" checked/> 　 
+                            未使用 <input type="radio" value="0" name="status" />
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-success addnav">提交</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<script src="/public/js/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<%include ./base/header.ejs%>
+<div id="banner-wapper">
+<div class="banner">
+    <h2>成功案例</h2>
+        <span>每一步工程都精雕细琢</span>
+        <p><span>当前位置：</span><a href="index.html">主页</a>>成功案例</p>
+    </div>
+</div>
+<div id="ban-bot-wapper">
+    <div class="ban-bot">
+        <ul><%for(let i=0;i<catedata.length;i++){%><li><a href="#"><%=catedata[i].catecasetitle%></a></li><%}%></ul>
+    </div>
+</div> 
+<div class="container">
+    <ul class="case">
+        <%for(let i=0;i<caselist.length;i++){%>
+            <li class="col-md-4"><a href="#"><img style="width:100%;height:300px;display:block;" src="<%=caselist[i].caseimage%>"></a></li>
+        <%}%>
+    </ul>
+</div>
+<%include ./base/footer.ejs%>

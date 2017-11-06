@@ -1,0 +1,15 @@
+<%include ./base/header.ejs%>
+<div id="banner-wapper">
+  <div class="banner">
+    <h2>成功案例</h2>
+        <span>每一步工程都精雕细琢</span>
+        <p><span>当前位置：</span><a href="index.html">主页</a>>关于我们</p>
+    </div>
+</div>
+<div id="ban-bot-wapper">
+    <div class="ban-bot">
+        <ul><%for(let i=0;i<nav.length;i++){%><li><a href="#"><%=nav[i].navtitle%></a></li><%}%></ul>
+    </div>
+</div>
+
+<%include ./base/footer.ejs%>
